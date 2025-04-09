@@ -1,0 +1,68 @@
+﻿.banner {
+    display: flex;
+    background-color: aquamarine;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding: 50px 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+.banner .img_deg {
+    width: 100%; /* Make image responsive */
+    max-width: 600px; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: -800px; /* Add margin below image */
+    margin-top: -2px;
+}
+
+.banner-content {
+    text-align: center; /* Center text horizontally */
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+    color: #ff4500;
+    background-image: url('img/textbehind.jpg');
+    text-shadow: 2px 2px 10px black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+    margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .banner {
+        flex-direction: row;
+        align-items: center; /* Center items vertically */
+        justify-content: flex-start; /* Align items to the start */
+        padding: 50px 60px; /* Larger padding for bigger screens */
+        height: auto; /* Reset height for larger screens */
+    }
+
+    .banner .img_deg {
+        margin-bottom: 0; /* Remove margin below image */
+    }
+
+    .banner-content {
+        margin-left: 50px; /* Space between image and text */
+        text-align: left; /* Align text to the left */
+    }
+
+    .banner-content h1 {
+        font-size: 3rem; /* Increase font size for larger screens */
+        line-height: 1.2; /* Adjust line height */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2rem; /* Smaller font size for small screens */
+    }
+
+    .banner .img_deg {
+        max-width: 200px; /* Smaller maximum width for small screens */
+    }
+}

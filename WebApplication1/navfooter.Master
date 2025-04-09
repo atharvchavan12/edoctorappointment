@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navfooter.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <title>Doctor Appointment System</title>
+    
+
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- FontAwesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+<!-- DataTables CSS from CDN -->
+ <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">  
+
+<!-- jQuery (full version, required for DataTables) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+
+
+  
+
+
+<!-- Popper.js (required for Bootstrap) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- DataTables JS from CDN -->
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>  
+
+  
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+  
+        <style>
+    /* Footer Background Color */
+    section {
+        background-color:#AFE1AF ;
+    }
+    footer {
+    width: 100%; /* Ensures full width for the footer */
+    clear: both; /* Clears any floating or flex issues */
+    margin-top: 40px; /* Space between content and footer */
+    flex: 0 0 100%; /* Takes full width if in a flex container */
+}
+
+  .navbar {
+        border-radius: 5px; /* Rounded corners for the navbar */
+        overflow: hidden; /* Ensure rounded corners are applied to child elements */
+    }
+
+    .navbar-nav .nav-link {
+        font-weight: bold; /* Bold text */
+        color: #003366; /* Default text color */
+        padding: 8px 15px;
+        position: relative;
+        transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for color, scale, and background */
+    font-size: 1rem; /* Increase font size */
+        }
+
+    /* Hover effect for nav-link */
+    .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: #003366; /* Underline color */
+        transition: width 0.3s ease; /* Smooth underline expansion */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #003366; /* Text color on hover */
+        background-color: rgba(0, 51, 102, 0.1); /* Light #003366 background with transparency */
+        transform: scale(1.05); /* Slightly scale up on hover */
+        border-radius: 5px; /* Maintain rounded corners on hover */
+    }
+
+    .navbar-nav .nav-link:hover::after {
+        width: 100%; /* Expand underline on hover */
+    }
+</style>
+
+
+
+ 
+</head>
+<body>
+<form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#AFE1AF;">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" width="70" height="60" alt="Logo" />
+                    <span class="navbar-brand font-weight-bold" style=" margin-left:-8px; color: darkred; font-size: 1.5rem;">ZOPE'S CLINIC</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                   
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                         <li class="nav-item active" runat="server">
+     <asp:LinkButton class="nav-link" ID="LinkButton8" runat="server" Visible="False" OnClick="LinkButton8_Click">HOME</asp:LinkButton>
+                         </li>
+                        <li class="nav-item active" runat="server">
+    <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server" Visible="False" OnClick="LinkButton6_Click">DOCTOR PANEL</asp:LinkButton>
+</li>
+                                   
+                                          <li class="nav-item active" runat="server">
+<asp:LinkButton class="nav-link" ID="LinkButton10" runat="server" Visible="False" OnClick="LinkButton10_Click">ABOUT US</asp:LinkButton>
+                    </li>
+                                            <li class="nav-item active" runat="server">
+<asp:LinkButton class="nav-link" ID="LinkButton11" runat="server" Visible="False" OnClick="LinkButton11_Click" >CONTACT</asp:LinkButton>
+                    </li>
+                                            <li class="nav-item active" runat="server">
+<asp:LinkButton class="nav-link" ID="LinkButton12" runat="server" Visible="False" OnClick="LinkButton12_Click" >FAQ</asp:LinkButton>
+                    </li>
+                                                                    <li class="nav-item active" runat="server">
+<asp:LinkButton class="nav-link" ID="LinkButton13" runat="server" Visible="False" OnClick="LinkButton13_Click" >DASHBOARD</asp:LinkButton>
+                    </li>
+                                                                                            <li class="nav-item active" runat="server">
+<asp:LinkButton class="nav-link" ID="LinkButton14" runat="server" Visible="False" OnClick="LinkButton14_Click">CONSULTANCY</asp:LinkButton>
+                    </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item active" runat="server">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" Visible="False" OnClick="LinkButton1_Click">DOCTOR LOGIN</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active" runat="server">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" Visible="False" OnClick="LinkButton2_Click">SIGN UP</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active" runat="server">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" Visible="False" OnClick="LinkButton5_Click">STATUS</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active" runat="server">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" Visible="False" OnClick="LinkButton3_Click">LOGOUT</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active" runat="server">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">LOGOUT</asp:LinkButton>
+                        </li>
+                        
+                        
+                        <li class="nav-item active" runat="server">
+    <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" Visible="False">WELCOME USER</asp:LinkButton>
+</li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+           
+
+    <!-- Main content placeholder -->
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- Main content placeholder -->
+
+
+
+  <section>
+    <div class="footer">
+        <footer class="footer bg-antiquewhite text-dark pt-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                        <h5 class="footer-title text-uppercase mb-4 font-weight-bold text-info">Quick Links</h5>
+                        <hr class="footer-divider mb-4">
+                        <p><a href="homepage1.aspx" class="footer-link text-dark">HOME</a></p>
+
+
+                     
+
+                        <p><a href="#" class="footer-link text-dark">DOCTORS</a></p>
+                        <p><a href="aboutus.aspx" class="footer-link text-dark">ABOUT US</a></p>
+                        <p><a href="#" class="footer-link text-dark">CONTACT</a></p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                        <h5 class="footer-title text-uppercase mb-4 font-weight-bold text-info">Get Help</h5>
+                        <hr class="footer-divider mb-4">
+                        <p><a href="faq.aspx" class="footer-link text-dark">FAQ</a></p>
+                        <p><a href="medicine.aspx" class="footer-link text-dark">MEDICINE</a></p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                        <h5 class="footer-title text-uppercase mb-4 font-weight-bold text-info">Address</h5>
+                        <hr class="footer-divider mb-4">
+                        <p>
+                            42/43, 2nd Floor, Aashirwad Complex, Maruti Mandir, Ratnagiri-415612<br>
+                            Time: 9.30 AM to 1.30 PM & 3.00 PM to 6.00 PM<br>
+                            Sunday Closed
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                        <h5 class="footer-title text-uppercase mb-4 font-weight-bold text-info">Contact</h5>
+                        <hr class="footer-divider mb-4">
+                        <p><i class="fas fa-home mr-2"></i>Ratnagiri-415612, Maharashtra</p>
+                        <p><i class="fas fa-envelope mr-2"></i>zopesclinic123@gmail.com</p>
+                        <p><i class="fas fa-phone mr-2"></i>9320882187, 8308826160</p>
+                        <p><i class="fas fa-print mr-2"></i>(02352)-244255</p>
+                    </div>
+                </div>
+
+                <hr class="footer-divider mb-4">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>&copy; All Rights Reserved By: 
+                            <a href="atharvchavan.aspx" class="footer-link text-info">
+                                <strong>Atharv Chavan</strong>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="facebook.aspx" class="text-dark"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="instagram.com" class="text-dark"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="whatsapp.com" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="linkedin.com" class="text-dark"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="youtube.com" class="text-dark"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</section>
+
+</form>
+</body>
+   
+    </html>
+

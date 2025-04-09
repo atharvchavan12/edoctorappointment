@@ -1,0 +1,130 @@
+﻿/* Navbar Styles */
+.navbar {
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    background-color: antiquewhite;
+}
+
+    .navbar .navbar-brand img {
+        max-height: 100%;
+        margin-right: 10px;
+    }
+
+    .navbar .navbar-nav .nav-item .nav-link {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+    }
+
+.dropdown-menu {
+    background-color: antiquewhite;
+}
+
+/* Banner Styles */
+.banner {
+    position: relative;
+    text-align: center;
+    background-color: aqua;
+    padding: 50px 0;
+}
+
+    .banner img {
+        width: 100px;
+        height: 80px;
+    }
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.banner h4 {
+    margin: 10px 0 0 0;
+    font-size: 1.5rem;
+}
+
+.btn-doctor {
+    background-color: darkgreen;
+    color: ghostwhite;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-left: 500px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-doctor:hover {
+        background-color: green;
+        cursor: pointer;
+    }
+
+/* Footer Styles */
+.footer {
+    background-color: antiquewhite;
+}
+
+.footer-title {
+    font-weight: bold;
+    text-info;
+}
+
+.footer-divider {
+    border: 1px solid #333;
+}
+
+.footer-link {
+    color: dark;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .navbar-brand img {
+        width: 70px;
+        height: 60px;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner h4 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #f8f9fa;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-brand img {
+        width: 50px;
+        height: 40px;
+    }
+
+    .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner h4 {
+        font-size: 1rem;
+    }
+}

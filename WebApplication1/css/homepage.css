@@ -1,0 +1,141 @@
+﻿
+/*image shape code*/
+
+/* Style for the features section */
+.container .card {
+    box-shadow: 0.5px 0.5px #666
+}
+
+    .container.card.imgbx {
+        position: relative;
+      
+       
+        box-shadow: 0 5px 40px #4cae4c
+    }
+
+        .container.card.imgbx img {
+            max-width: 50%;
+            border-radius: 10px;
+        }
+
+.imgbx:hover img {
+    transform: scale(1.1);
+}
+
+.change {
+    background-color: #f9f9f9;
+    padding: 50px 0; /* Adjust padding as needed */
+}
+.custom-container {
+    @include make-container();
+}
+
+.container {
+    max-width: 1200px; /* Limit width of content */
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.col-md-3 {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px; /* Add padding around each column */
+}
+
+.changeshape {
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+    max-width: 100%;
+    height: auto;
+}
+
+h4 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.text-justify {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/*feedbkack form code*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.feedback-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+}
+
+    button:hover {
+        background-color: #4cae4c;
+    }
+
+#feedback-response {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+*/
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 50px 0;
+    background-image:  background-image: url('../img/4availablefeature.jpg');
+}
+
+.banner .img_deg {
+    max-width: 200px; /* Set a max width for the image */
+    margin-right: 20px; /* Space between the image and the text */
+}
+    
+}
